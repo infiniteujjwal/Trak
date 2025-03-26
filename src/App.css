@@ -1,0 +1,211 @@
+body {
+  font-family: "inter";
+}
+
+.btnShadow {
+  box-shadow: 5px 4px 0px;
+  border-radius: 12px;
+ 
+}
+.btnShadow:hover{
+  transform: translateY(2px);
+  box-shadow: 1px 1px 0;
+}
+
+.fontClass {
+  font-family: "Suranna", serif;
+}
+
+.fontClassFastHand {
+  font-family: "Fasthand", sans-serif;
+}
+.fontClassFAQ{
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+.cycle-container {
+  display: flex;
+  justify-content: space-between; /* Adjusted for better spacing */
+  align-items: center;
+  position: relative;
+  width: 80%; /* Set a width for the container */
+  margin: auto; /* Center the container */
+}
+
+.stage {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+  width: 100px; /* Set a fixed width for the boxes */
+  text-align: center; /* Center text inside the boxes */
+}
+
+@keyframes moveDots {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset:40; /* Adjust based on the length of the path */
+  }
+}
+
+path {
+  animation: moveDots 1s linear infinite;
+  z-index:-800;
+  
+}
+
+.gradient-background {
+  background: linear-gradient(to right, #D3FFF0 0%, #45CC8B 47%, #FFFFFF 95%);
+  
+}
+
+
+.gradient-background2 {
+  background: linear-gradient(to right, #FFFFFF 0%, #45BACC 47%, #9FEEC9 95%);
+}
+
+.gradient-background3 {
+  background: linear-gradient(to right, #FFFFFF 0%, #45CC8B 47%, #D9EB7F 95%);
+ 
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hamburger-slide-in {
+  animation: slideIn 0.8s forwards;
+}
+
+
+
+@keyframes moveLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(10%); }
+}
+
+
+
+@keyframes moveRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-10%);
+  }
+}
+
+.enable-animation-right {
+  animation: moveRight 10s infinite alternate;
+}
+
+.enable-animation-left {
+  animation: moveLeft 10s infinite alternate;
+}
+
+.boxShadow {
+  box-shadow: 2px 4px 20px rgba(200, 200, 200, 1),
+      -5px -5px 10px rgba(255, 255, 255, 1);
+  /* Adjusted box-shadow for white background */
+}
+
+
+.fc-loader_overlay-fill {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  pointer-events: none;
+ 
+}
+
+
+
+/* Smoke container */
+.smoke-container {
+  position: fixed;
+  border: 2px solid green;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+
+/* Smoke animation */
+.smoke-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  bottom: 0; /* Start below the screen */
+  left: 0;
+  background: url("./assets/smoke4.svg") repeat-x; /* Use the smoke texture */
+ 
+}
+.smoke-overlay1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+ 
+  background: url("./assets/smoke1.svg") repeat-x; /* Use the smoke texture */
+ 
+  animation: riseSmoke 5s ease-in-out forwards;
+}
+
+
+@keyframes riseSmoke {
+  0% {
+    transform: translateY(100%); /* Start below the screen */
+    opacity: 1; /* Fully visible */
+  }
+  100% {
+    transform: translateY(-100%); /* Move to the top */
+    opacity: 0; /* Fade out */
+  }
+}
+
+.scroll-content{
+  transform: translate(0%, 4.9487%) translate3d(0px, 0px, 0px);
+  will-change: transform;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 769px) {
+ .displayMe{
+  display: none;
+ }
+  
+}
