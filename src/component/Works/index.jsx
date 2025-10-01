@@ -139,7 +139,7 @@ Once Trak understands your goals and current skills, it creates a real-time skil
 
 
             </section>
-           <Button txt = "How its works" navigateTo="pathway"/>
+           <Button txt = "How its works" navigateTo="pathway" className='mt-10'/>
         </div>
     )
 }

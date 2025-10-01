@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='px-20 max-md:px-5'>
+      <section aria-labelledby='hero-title' className='px-20 max-md:px-5'>
         {showOverlay && (
           <div>
             <SmokeEmulsion />
@@ -29,10 +29,10 @@ const Home = () => {
         )}
         
         {/* Single, Truly Responsive Header */}
-        <h1 className='
+        <h1 id='hero-title' className='
           w-full fontClass font-medium 
           text-6xl md:text-6xl sm:text-5xl max-sm:text-4xl 
-          my-10 leading-tight
+          my-10 leading-tight animate-fade-in
         '>
           Your dream career isn't a faraway destination – it's a journey. 
           Trak makes sure you're on the &nbsp;
@@ -41,7 +41,7 @@ const Home = () => {
               right path
               <img 
                 src={Scribble} 
-                alt="scribble lines" 
+                alt="" aria-hidden="true"
                 className='
                   h-4 sm:h-5 md:h-6 
                   absolute -bottom-2 left-0 right-0
@@ -52,14 +52,14 @@ const Home = () => {
           , every step of the way.
         </h1>
 
-        <div className='flex w-full justify-between max-md:flex-col'>
+        <div className='grid grid-cols-2 gap-10 items-start max-md:grid-cols-1'>
           <div>
-            <p className='mt-20 max-md:mt-10'>
+            <p className='mt-10 max-md:mt-6 animate-fade-in-delay'>
               Master In-Demand Skills with Your Personal AI Mentor – Fast, Practical, and Market-Aligned.
             </p>
             <Button 
               txt="Explore Skills That Get Me Hired"
-              className=''
+              className='mt-6'
               navigateTo='error' 
             />
           </div>
@@ -78,7 +78,7 @@ const Home = () => {
         <section id='About' className='my-20'>
           <About />
         </section>
-      </div>
+      </section>
       <Footer />
     </>
   )
